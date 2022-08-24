@@ -1,0 +1,226 @@
+/* GENERALES */
+
+*{
+    padding: 0;
+    margin: 0;
+    scrollbar-width: none;
+}
+
+ion-icon{
+    color: #000;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:active{
+    color: beige;
+}
+
+/* LINKS ARRIBA */
+
+#links-header ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.links-li{
+    margin-left: 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.links-li:hover{
+    color:#777;
+}
+
+#links-cuenta{
+    cursor: pointer;
+}
+
+/* HEADER */
+
+#header{
+    width: 100%;
+    display: flex;
+    height: 70px;
+}
+
+#logo-container{
+    border: 1px solid blue;
+    width: 300px;
+    height: 100%;
+}
+
+#logo{
+    float: left;
+}
+
+/* ICONOS */
+
+.iconos{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border: 1px solid greenyellow;
+}
+
+.fav-icono{
+    font-size: 29px;
+}
+
+.bolsa-icono{
+    font-size: 30px;
+}
+
+.iconos a div{
+    margin-left: 7px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconos a div:hover{
+    background: grey;
+    opacity: .2;
+}
+
+.a-btn{
+    display: none;
+}
+/* MENU */
+
+#menu{
+    width: 80%;
+    height: 100%;
+}
+
+#menu ul{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#menu ul li{
+    margin: 0px 1px;
+    text-align: center;   
+}
+
+#menu ul li a{
+    border-bottom: 1px solid black;
+    padding: 26px 20px;
+}
+
+/* MENÚ DESPLEGABLE */
+
+.btn{
+    display: none;
+    float: right;
+}
+
+#menu-desplegable{
+    z-index: 1000;
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    background-color: white;
+}
+
+#menu-desplegable ul{
+    display: none;
+    list-style: none;
+    width: 100%;
+}
+
+#menu-desplegable ul li a{
+    text-decoration: none;
+    text-align: center;
+}
+
+#botones-menu{
+    display: none;
+}
+
+#cuenta-desplegable{
+    display: none;
+}
+
+/* FORMULARIOS */
+
+.formularios{
+    width: 324px;
+    margin: 100px auto;
+}
+
+.formularios h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.formularios form p{
+    margin-left: 3px;
+    font-size: 12px;
+    display: inline;
+    text-align: center;
+}
+
+form{
+    width: 324px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"]{
+    display: block;
+    width: 290px;
+    height: 38px;
+    margin-bottom: 14px;
+    padding: 0px 16px;
+}
+
+input[type="submit"]{
+    margin-top: 10px;
+    display: block;
+    width: 75%;
+    height: 38px;
+    margin: 10px auto  0px auto;
+}
+
+/* MAIN */
+
+#content{
+    width: 100%;
+}
+
+#slider{
+    width: 100%;
+    height: 90vh;
+    border: 1px solid violet;
+}
+
+/* FOOTER */
+
+#footer{
+    border: 1px solid grey;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top:10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
