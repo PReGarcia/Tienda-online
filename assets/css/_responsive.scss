@@ -3,16 +3,47 @@
 }
 
 @include media-lg{
+    #icons{
+        width: auto;
+    }
+
     .btn{
         display: none;
+        width: 0px;
     } 
 
     #menu{
         visibility: visible;
+        position: static;
+        display: inline-block;
+        background: transparent;
+        height: 100%;
         
         ul{
             transform: translateX(0);
-            display: block;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-flow: row nowrap;
+            margin-left: 5px; 
+            
+            a{
+                display: block;
+                border-bottom: 1px solid red;
+                height: 100%;
+                width: 100px;
+                margin-right: 5px;
+                text-decoration: none;
+
+                :hover{
+                    color: white;           
+                }
+                
+                li{
+                    @include cover(100%);
+                    @include flexCenter('');
+                }
+            }
         }
     }
 }

@@ -50,18 +50,6 @@ body {
   overflow-x: hidden;
 }
 
-@media screen and (min-width: 1024px) {
-  .btn {
-    display: none;
-  }
-  #menu {
-    visibility: visible;
-  }
-  #menu ul {
-    transform: translateX(0);
-    display: block;
-  }
-}
 /* HEADER */
 #header {
   width: 100%;
@@ -78,6 +66,7 @@ body {
   min-width: 100px;
   border-bottom: 1px solid blue;
   display: inline-block;
+  float: left;
 }
 
 #icons {
@@ -147,6 +136,50 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  #icons {
+    width: auto;
+  }
+  .btn {
+    display: none;
+    width: 0px;
+  }
+  #menu {
+    visibility: visible;
+    position: static;
+    display: inline-block;
+    background: transparent;
+    height: 100%;
+  }
+  #menu ul {
+    transform: translateX(0);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    margin-left: 5px;
+  }
+  #menu ul a {
+    display: block;
+    border-bottom: 1px solid red;
+    height: 100%;
+    width: 100px;
+    margin-right: 5px;
+    text-decoration: none;
+  }
+  #menu ul a :hover {
+    color: white;
+  }
+  #menu ul a li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: "";
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
