@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* INCLUDES */ /* FORMULARIOS */
+.formularios {
+  width: 324px;
+  margin: 100px auto;
+}
+.formularios h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.formularios form p {
+  margin-left: 3px;
+  font-size: 12px;
+  display: inline;
+  text-align: center;
+}
+
+form {
+  width: 324px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=date] {
+  display: block;
+  width: 290px;
+  height: 38px;
+  margin-bottom: 14px;
+  padding: 0px 16px;
+}
+
+input[type=submit] {
+  margin-top: 10px;
+  display: block;
+  width: 75%;
+  height: 38px;
+  margin: 10px auto 0px auto;
+}
+
+/* GENERALES */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* HEADER */
+#header {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+}
+
+#logos {
+  width: 200px;
+  height: 100%;
+  min-width: 100px;
+  border-bottom: 1px solid blue;
+  display: inline-block;
+}
+
+#icons {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid red;
+  float: right;
+}
+#icons .btn {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+#icons #fav-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+#icons #bag-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* MENÚ */
+#menu {
+  visibility: hidden;
+  background-color: grey;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0.98;
+  height: 100vh;
+}
+#menu.open {
+  visibility: visible;
+}
+#menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: "column";
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  height: 50vh;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+#menu ul.open {
+  transform: translateX(0);
+}
+
+/* MAIN */
+#main {
+  margin-top: 70px;
+}
+
+/* FOOTER */
+#footer {
+  border-top: 1px solid grey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

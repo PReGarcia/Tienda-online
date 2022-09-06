@@ -5,7 +5,6 @@ require_once 'config/db.php';
 require_once 'helpers/utils.php';
 require 'config/parameters.php';
 require_once 'views/layout/header.php';
-require_once 'views/layout/menu.php';
 ob_start();
 
 function showError(){

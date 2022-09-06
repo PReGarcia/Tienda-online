@@ -1,10 +1,25 @@
 // let btn = document.getElementById('btn');
-let menu = document.getElementById('menu-desplegable');
+let menu = document.getElementById('menu');
+let menuNav = document.getElementById('menu-ul')
 let btn = document.getElementsByClassName('btn');
 
-Array.from(btn).forEach(b => {
-    b.addEventListener("click", ()=>{
-        menu.classList.toggle("hidden");
-        menu.classList.toggle("unhidden");
-    })
+let showMenu = false;
+
+btn.forEach(b =>{
+    b.addEventListener('click', toggleMenu);
 })
+
+function toggleMenu(){
+    if(!showMenu){
+        menu.classList.add('open');
+        menuNav.classList.add('open');
+
+        showMenu = true;
+    }
+    else{
+        menu.classList.remove('open');
+        menuNav.classList.remove('open');
+
+        showMenu = false;
+    }
+}

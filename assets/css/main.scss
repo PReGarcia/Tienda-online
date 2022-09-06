@@ -1,0 +1,100 @@
+/* INCLUDES */
+
+@import 'forms';
+@import 'configs';
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+
+/* HEADER */
+
+#header{
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+
+#logos{
+    @include cover(200px);
+    min-width: 100px;
+    border-bottom: 1px solid blue;
+    display: inline-block;
+}
+
+
+
+#icons{
+    @include cover(100px);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid red;
+    float: right;
+
+    .btn{
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+    }
+    
+    #fav-icon{
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    #bag-icon{
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+}
+  
+/* MENÚ */
+
+#menu{
+    visibility: hidden;
+    background-color: grey;
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0.98;
+    height: 100vh;
+
+    &.open{
+        visibility: visible;
+    }
+
+    ul{
+        list-style: none;
+        @include flexCenter('column');   
+        flex-flow: column wrap;
+        height: 50vh;
+        transform: translateX(100%);
+        @include transition-ease;
+        overflow: hidden;
+
+        &.open{
+            transform: translateX(0);
+        }
+    }
+}
+/* MAIN */ 
+
+#main{
+    margin-top: 70px;
+}
+
+/* FOOTER */
+
+#footer{
+    border-top: 1px solid grey;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top:10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
