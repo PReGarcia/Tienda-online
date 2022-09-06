@@ -50,6 +50,18 @@ body {
   overflow-x: hidden;
 }
 
+@media screen and (min-width: 1024px) {
+  .btn {
+    display: none;
+  }
+  #menu {
+    visibility: visible;
+  }
+  #menu ul {
+    transform: translateX(0);
+    display: block;
+  }
+}
 /* HEADER */
 #header {
   width: 100%;

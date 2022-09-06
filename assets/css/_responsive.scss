@@ -1,0 +1,18 @@
+@include media-md{
+    
+}
+
+@include media-lg{
+    .btn{
+        display: none;
+    } 
+
+    #menu{
+        visibility: visible;
+        
+        ul{
+            transform: translateX(0);
+            display: block;
+        }
+    }
+}

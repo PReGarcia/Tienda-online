@@ -5,7 +5,7 @@ let btn = document.getElementsByClassName('btn');
 
 let showMenu = false;
 
-btn.forEach(b =>{
+Array.from(btn).forEach(b =>{
     b.addEventListener('click', toggleMenu);
 })
 
