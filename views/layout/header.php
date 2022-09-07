@@ -10,7 +10,7 @@
         <header id="header">
             <div id="logos"></div>
             <nav id="menu">
-                <img class="btn" src="<?=base_url?>/assets/img/close-outline.svg">
+                <ion-icon class="btn" name="close-outline"></ion-icon>
                 <ul id="menu-ul">
                     <a href="#"><li>ertyuio</li></a>
                     <a href="#"><li>werty</li></a>
@@ -19,9 +19,9 @@
                 </ul>
             </nav>
             <div id="icons">
-                <img id="bag-icon" src="<?=base_url?>/assets/img/bag-outline.svg">
-                <img id="fav-icon" src="<?=base_url?>/assets/img/bookmark-outline.svg">
-                <img class="btn" src="<?=base_url?>/assets/img/menu-outline.svg">
+                <ion-icon id="fav-icon" name="bookmark-outline"></ion-icon>
+                <ion-icon id="bag-icon" name="bag-outline"></ion-icon>
+                <ion-icon class="btn" name="reorder-three-outline"></ion-icon>
             </div>
         </header> 
         <main id="main">

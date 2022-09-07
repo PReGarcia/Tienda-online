@@ -1,5 +1,14 @@
 @include media-md{
-    
+    #menu{
+        width: 486px;
+
+        ul{
+            a{
+                width: 376.6px;
+                padding: 10px 54.7px;
+            }
+        }
+    }
 }
 
 @include media-lg{
@@ -17,9 +26,11 @@
         position: static;
         display: inline-block;
         background: transparent;
+        width: auto;
         height: 100%;
         
         ul{
+            padding: 0px 0px;
             transform: translateX(0);
             height: 100%;
             display: flex;
