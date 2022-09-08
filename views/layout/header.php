@@ -7,6 +7,15 @@
         <!-- <link rel="stylesheet" href="<?= base_url ?>assets/css/queries.css"> -->
     </head>
     <body>
+        <div id="links-header">
+            <ul>
+            <a href=""><li>Ayuda</li></a>
+                <li><span>|</span></li>
+                <a href="<?=base_url?>usuario/logeo"><li>Iniciar sesión</li></a>
+                <li><span>|</span></li>
+                <a href="<?=base_url?>usuario/registro"><li>Registrarse</li></a>
+            </ul>
+        </div>
         <header id="header">
             <div id="logos"></div>
             <nav id="menu">

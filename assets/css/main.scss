@@ -17,6 +17,23 @@
     z-index: 20;
 }
 
+#links-header{
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 100;
+
+    ul{
+        list-style: none;
+        display: flex;
+
+        li{
+            margin-right: 5px;
+        }
+    }
+}
+
 #logos{
     @include cover(200px);
     min-width: 100px;
@@ -64,6 +81,7 @@
     opacity: 0.98;
     height: 100vh;
     width: 320px;
+    z-index: 200;
 
     &.open{
         visibility: visible;
@@ -112,10 +130,6 @@
     padding-top:10px;
     padding-bottom: 10px;
     text-align: center;
-}
-
-.btn:hover{
-    color: white;
 }
 
 @import 'responsive';

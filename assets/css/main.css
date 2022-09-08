@@ -60,6 +60,21 @@ body {
   z-index: 20;
 }
 
+#links-header {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 100;
+}
+#links-header ul {
+  list-style: none;
+  display: flex;
+}
+#links-header ul li {
+  margin-right: 5px;
+}
+
 #logos {
   width: 200px;
   height: 100%;
@@ -103,6 +118,7 @@ body {
   opacity: 0.98;
   height: 100vh;
   width: 320px;
+  z-index: 200;
 }
 #menu.open {
   visibility: visible;
@@ -150,10 +166,6 @@ body {
   text-align: center;
 }
 
-.btn:hover {
-  color: white;
-}
-
 @media screen and (min-width: 768px) {
   #menu {
     width: 486px;
@@ -166,6 +178,9 @@ body {
 @media screen and (min-width: 1024px) {
   #icons {
     width: auto;
+  }
+  #links-header {
+    display: inline-block;
   }
   .btn {
     display: none;
