@@ -12,13 +12,15 @@
 
     <div class="section-home">
         <?php while( $product = $productos_cat->fetch_object() ):?>
-            <a href="<?=base_url?>producto/info/<?=$product->id?>">
-                <div class="producto-pre">
-                    <img src="<?=base_url?>uploads/images/<?=$product->imagen?>">
-                    <p class="nombre-pro"><?=$product->nombre?></p>
-                    <p class="precio"><?=$product->precio?></p>
-                </div>
-            </a>
+            <?php if($_GET['id'] != $product->id) :?>
+                <a href="<?=base_url?>producto/ver&id=<?=$product->id?>">
+                    <div class="producto-pre">
+                        <img src="<?=base_url?>uploads/images/<?=$product->imagen?>">
+                        <p class="nombre-pro"><?=$product->nombre?></p>
+                        <p class="precio"><?=$product->precio?></p>
+                    </div>
+                </a>
+            <?php endif; ?>
         <?php endwhile; ?>
     </div>  
 </div> 
