@@ -7,21 +7,23 @@
         <!-- <link rel="stylesheet" href="<?= base_url ?>assets/css/queries.css"> -->
     </head>
     <body>
-        <div id="links-header">
-            <ul>
-            <a href=""><li>Ayuda</li></a>
-                <li><span>|</span></li>
-                <a href="<?=base_url?>usuario/logeo"><li>Iniciar sesión</li></a>
-                <li><span>|</span></li>
-                <a href="<?=base_url?>usuario/registro"><li>Registrarse</li></a>
-            </ul>
-        </div>
+        
         <header id="header">
+            <div id="links-header">
+                <ul>
+                    <a href=""><li>Ayuda</li></a>
+                    <li><span>|</span></li>
+                    <a href="<?=base_url?>usuario/logeo"><li>Iniciar sesión</li></a>
+                    <li><span>|</span></li>
+                    <a href="<?=base_url?>usuario/registro"><li>Registrarse</li></a>
+                </ul>
+            </div>
+            <br>
             <div id="logos"></div>
             <nav id="menu">
                 <ion-icon class="btn" name="close-outline"></ion-icon>
                 <ul id="menu-ul">
-                    <a href="#"><li>ertyuio</li></a>
+                <a href="<?=base_url?>"><li>Inicio</li></a>
                     <a href="#"><li>werty</li></a>
                     <a href="#"><li>wert</li></a>
                     <a href="#"><li>erty</li></a>
@@ -35,5 +37,4 @@
         </header> 
         <main id="main">
             
-        </main>
 

@@ -1,0 +1,61 @@
+@import 'mixins';
+
+#slider{
+    width: 100%;
+    height: 100vh;
+
+    #slider-container{
+        position: relative;
+        z-index: 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        .slider-section{
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+
+            &:first-child{
+               background-color: grey;
+            }
+            
+            &:nth-child(2){
+                background-color: red;
+            }
+            
+            &:nth-child(3){
+                background-color: green;
+            }
+
+            &:last-child{
+                background-color: grey;
+            }
+        }
+    }
+
+    .puntos{
+        position: absolute;
+        bottom: -70px;
+        list-style: none;
+        display: flex;
+        flex-flow: row nowrap;
+
+        .punto{
+            cursor: pointer;
+            width: 1em;
+            height: 1em;
+            margin: 2px;
+            background: green;
+            border-radius: 50px;
+
+            .activo{
+                background-color: red;
+            }
+        }
+
+        .activo{
+            background-color: blue;
+        }
+    }
+}

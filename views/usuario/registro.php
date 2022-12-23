@@ -11,10 +11,11 @@
 
         <input type="text" name="date" placeholder="Fecha de nacimiento" onfocus="(this.type='date')" required> 
 
-        <input type="checkbox" required>
-        <p>Acepto la <a href="#" class="links-check">política de privacidad</a> y los <a href="#" links-check>términos de uso</a> de la empresa</p>
+        <div>
+            <input type="checkbox" required>
+            <p>Acepto la <a href="#" class="links-check">política de privacidad</a> y los <a href="#" links-check>términos de uso</a> de la empresa</p>
+        </div>
         
-
         <input type="submit" value="Enviar">
     </form>
 </div>

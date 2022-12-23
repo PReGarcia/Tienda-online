@@ -5,25 +5,36 @@
 @import 'variables';
 @import 'mixins';
 @import 'functions';
+@import 'slider';
+
+/* SCROLLBAR */
+
+*::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: grey;
+}
 
 /* HEADER */
 
 #header{
     width: 100%;
     height: 70px;
-    border-bottom: 1px solid black;
     position: fixed;
     top: 0;
-    z-index: 20;
+    z-index: 200;
+    br{
+        display: none;
+    }
 }
 
 #links-header{
     display: none;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: 100;
-
+    float: right;
     ul{
         list-style: none;
         display: flex;
@@ -45,8 +56,9 @@
 
 
 #icons{
-    @include cover(100px);
+    @include cover(120px);
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     border-bottom: 1px solid red;
     float: right;
@@ -74,7 +86,7 @@
 
 #menu{
     visibility: hidden;
-    background-color: grey;
+    background-color: blue;
     position: fixed;
     top: 0;
     right: 0;
@@ -103,6 +115,7 @@
         transform: translateX(100%);
         @include transition-ease;
         overflow: hidden;
+        z-index: 200;
 
         a{
             width: 248px;
@@ -120,16 +133,88 @@
     margin-top: 70px;
 }
 
+/* PRODUCTO */
+
+#product_main{
+    border: 1px solid red;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    .img_prod{
+        height: 100px;
+        width: 100px;
+    }
+}
+
+#aside_product{
+    border: 1px solid red;
+    height: 100vh;
+}
 /* FOOTER */
 
 #footer{
     border-top: 1px solid grey;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     padding-top:10px;
     padding-bottom: 10px;
     text-align: center;
+}
+
+/* DESTACADOS */
+.destacados{
+    margin-top: 15px;
+    @include listaProductos;
+    a{
+        display: block;
+        text-decoration: none;
+        h2{
+            padding: 20px;
+            display: inline-block;
+        }
+        .arrow{
+            width: 20px;
+            height: 20px;
+            @include transition-slow;
+        }
+        &:hover{
+            .arrow{
+                margin-left: 10px;
+                @include transition-ease;
+            } 
+        }
+    }
+}
+
+/* PRODUCTOS */
+
+#product_main{
+    .section-home{
+        height: 200px;
+        overflow: auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        .producto-pre{
+            flex-shrink: 0;
+            @include flexCenter(column);
+            width: 100px;
+            height: 150px;
+            margin-right: 30px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            border: 1px solid black;
+
+            &first-child{
+                margin-left: 30px;
+            }
+
+            p{
+                display: block;
+                width: 80%;
+            }
+            
+        }
+    } 
 }
 
 @import 'responsive';

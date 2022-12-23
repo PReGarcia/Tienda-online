@@ -24,5 +24,14 @@ class Categoria{
 	public function setNombre($nombre){
 		$this->nombre = $nombre;
 	}
-
+	
+	public function getAll(){
+		$categories = $this->db->query("SELECT * FROM categorias ORDER BY id DESC");
+		return $categories;
+	}
+	
+	public function getRandom($cat_id,$limit){
+		$productos_cat = $this->db->query("SELECT * FROM productos WHERE categoria_id = $cat_id ORDER BY RAND() LIMIT $limit");
+		return $productos_cat;
+	}
 }

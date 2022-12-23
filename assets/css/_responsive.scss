@@ -12,12 +12,18 @@
 }
 
 @include media-lg{
+    #header{
+        br{
+            display: block;
+        }
+    }
     #icons{
-        width: auto;
+        width: 80px;
+        justify-content: space-evenly;
     }
 
     #links-header{
-        display: inline-block;
+        display: block;
     }
 
     .btn{
@@ -59,6 +65,20 @@
                     @include flexCenter('');
                 }
             }
+        }
+    }
+
+    #main{
+        margin-top: 88px;
+    }
+
+    #slider{
+        #slider-container{
+
+        }
+
+        .puntos{
+            bottom: -88px;
         }
     }
 }
